@@ -1,10 +1,10 @@
 from django.urls import path
-from .views import game_list, create_game, game_detail, update_game, delete_game
+from .views import list_games, list_game, create_game, update_game, delete_game
 
 urlpatterns = [
-    path('game-list/', game_list, name='game-list'),
+    path('game-list/', list_games, name='game-list'),
+    path('list-game/<str:pk>/', list_game, name='list-game'),
     path('game-create/', create_game, name='create-game'),
-    path('list-game/<str:pk>/', game_detail, name='list-game'),
     path('update-game/<str:pk>/', update_game, name='update-game'),
     path('delete-game/<str:pk>/', delete_game, name='delete-game'),
 ]
