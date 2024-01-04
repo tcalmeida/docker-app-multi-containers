@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import list_games, list_game, create_game, update_game, delete_game
+from .views import home, list_games, list_game, create_game, update_game, delete_game
 
 urlpatterns = [
+    path('', home, name='home'),
     path('games-list/', list_games, name='games-list'),
     path('list-game/<str:pk>/', list_game, name='list-game'),
     path('game-create/', create_game, name='create-game'),
