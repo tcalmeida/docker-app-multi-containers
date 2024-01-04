@@ -9,6 +9,7 @@ from .serializers import GameSerializer
 
 def home(request):
     return render(request, "index.html")
+
 # list all games
 @api_view(['GET'])
 def list_games(request):
