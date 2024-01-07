@@ -76,7 +76,7 @@ DATABASES = {
         'NAME': env('POSTGRES_DB'),
         'USER': env('POSTGRES_USER'),
         'PASSWORD': env('POSTGRES_PASSWORD'),
-        'HOST': env('HOST'),
+        'HOST': 'db',  #container host name in docker compose
         'PORT': '5432',
     }
 }
