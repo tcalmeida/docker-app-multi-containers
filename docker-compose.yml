@@ -34,5 +34,13 @@ services:
     networks:
       - app_net
 
+  prometheus:
+    image: prom/prometheus:main
+    ports:
+      - "9090:9090"
+    networks:
+      - app_net
+
+
 volumes:
   pgdata:
